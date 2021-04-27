@@ -36,9 +36,34 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+// At the beginning turtle faces to the right. Heading is 0 degreees.
+turtle.currentPosition()
+turtle.currentHeading()
 
+// Move turtle to middle of canvas
+turtle.penUp()
+turtle.forward(steps: canvas.width/2)
+
+turtle.left(by: 90)
+turtle.forward(steps: canvas.height/2)
+turtle.drawSelf()
+
+turtle.currentPosition()
+turtle.currentHeading()
+
+// We want to draw the letter K
+turtle.forward(steps: 100)
+turtle.drawSelf()
+
+// Turn the turtle around
+turtle.right(by: 180)
+turtle.drawSelf()
+
+
+// Move the turtle back to middle of stick
+turtle.penUp()
+turtle.forward(steps: 50)
+turtle.drawSelf()
 /*:
  ## Show the Live View
  Don't see any results?
