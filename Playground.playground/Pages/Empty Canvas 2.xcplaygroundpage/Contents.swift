@@ -45,50 +45,60 @@ turtle.forward(steps: canvas.width/2)
 
 turtle.left(by: 90)
 turtle.forward(steps: canvas.height/2)
+turtle.right(by: 90)
 //turtle.drawSelf()
 
+// Set the size of a square from our plan within this canvas
+let squareSize = 10
+
 // Drawing the bottom of the arrow
-//turtle.drawSelf()
+turtle.drawSelf()
 turtle.penUp()
 turtle.right(by: 90)
 //turtle.drawSelf()
 turtle.penDown()
-turtle.forward(steps: 30)
+turtle.forward(steps: 2 * squareSize)
 //turtle.drawSelf()
 
 // Drawing one of the sides of the arrow
 turtle.penUp()
 turtle.left(by: 90)
 turtle.penDown()
-turtle.forward(steps: 100)
+turtle.forward(steps: 3 * squareSize)
 //turtle.drawSelf()
 
 // Drawing the first side of the arrow
 turtle.right(by: 90)
-turtle.forward(steps: 15)
+turtle.forward(steps: 1 * squareSize)
 
 // Drawing the first half of the tip of the arrow
 turtle.left(by: 135)
-turtle.forward(steps: 43)
+turtle.forward(steps: Int(round(2.0 * Double(2).squareRoot() * Double(squareSize))))
 //turtle.drawSelf()
 
 // Drawing the other half of the arrow's tip
 turtle.left(by: 90)
-turtle.forward(steps: 43)
+turtle.forward(steps: Int(round(2.0 * Double(2).squareRoot() * Double(squareSize))))
 //turtle.drawSelf()
 
 // Drawing the second side of the arrow
 turtle.left(by: 135)
 //turtle.drawSelf()
-turtle.forward(steps: 15)
+turtle.forward(steps: 1 * squareSize)
 //turtle.drawSelf()
 
 // Drawing the last long side of the arrow
 turtle.right(by: 90)
-turtle.forward(steps: 100)
+turtle.forward(steps: 3 * squareSize)
+
+
+// Swing around to face in same direction as when arrow started to be drawn
+turtle.left(by: 180)
 
 
 
+// Check the turtle's position
+turtle.drawSelf()
 
 
 
