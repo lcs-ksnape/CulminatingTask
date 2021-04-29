@@ -4,8 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 600
-let preferredHeight = 600
+let preferredWidth = 450
+let preferredHeight = 550
 /*:
  ## Required code
  
@@ -36,8 +36,62 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+turtle.currentPosition()
+turtle.currentHeading()
+
+// Move turtle to middle of canvas
+turtle.penUp()
+turtle.forward(steps: canvas.width/2)
+
+turtle.left(by: 90)
+turtle.forward(steps: canvas.height/2)
+//turtle.drawSelf()
+
+// Drawing the bottom of the arrow
+//turtle.drawSelf()
+turtle.penUp()
+turtle.right(by: 90)
+//turtle.drawSelf()
+turtle.penDown()
+turtle.forward(steps: 30)
+//turtle.drawSelf()
+
+// Drawing one of the sides of the arrow
+turtle.penUp()
+turtle.left(by: 90)
+turtle.penDown()
+turtle.forward(steps: 100)
+//turtle.drawSelf()
+
+// Drawing the first side of the arrow
+turtle.right(by: 90)
+turtle.forward(steps: 15)
+
+// Drawing the first half of the tip of the arrow
+turtle.left(by: 135)
+turtle.forward(steps: 43)
+//turtle.drawSelf()
+
+// Drawing the other half of the arrow's tip
+turtle.left(by: 90)
+turtle.forward(steps: 43)
+//turtle.drawSelf()
+
+// Drawing the second side of the arrow
+turtle.left(by: 135)
+//turtle.drawSelf()
+turtle.forward(steps: 15)
+//turtle.drawSelf()
+
+// Drawing the last long side of the arrow
+turtle.right(by: 90)
+turtle.forward(steps: 100)
+
+
+
+
+
+
 
 /*:
  ## Show the Live View
