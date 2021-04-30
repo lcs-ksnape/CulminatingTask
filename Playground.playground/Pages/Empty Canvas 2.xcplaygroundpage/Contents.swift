@@ -121,11 +121,76 @@ turtle.penDown()
 // Draw a second arrow
 drawArrow()
 
+// Draw third arrow
+turtle.penUp()
+turtle.backward(steps: 15 * squareSize)
+turtle.penDown()
+drawArrow()
 
+// Draw fourth arrow
+turtle.penUp()
+turtle.forward(steps: 5 * squareSize)
+turtle.penDown()
+drawArrow()
 
+// Draw fifth arrow
+turtle.penUp()
+turtle.backward(steps: 10 * squareSize)
+turtle.penDown()
+drawArrow()
 
+// Draw sixth arrow
+turtle.penUp()
+turtle.forward(steps: 25 * squareSize)
+turtle.penDown()
+drawArrow()
 
+// Start on the next row
+turtle.penUp()
+turtle.left(by: 90)
+turtle.forward(steps: 35)
+turtle.left(by: 90)
+turtle.backward(steps: 90)
+turtle.penDown()
+drawArrow()
 
+// Draw second arrow on second level
+turtle.penUp()
+turtle.forward(steps: 5 * squareSize)
+turtle.penDown()
+drawArrow()
+
+// Draw third arrow on second level
+turtle.penUp()
+turtle.forward(steps: 5 * squareSize)
+turtle.penDown()
+drawArrow()
+
+// Draw fourth arrow on second level
+turtle.penUp()
+turtle.forward(steps: 5 * squareSize)
+turtle.penDown()
+drawArrow()
+
+// Draw fifth arrow on second level
+turtle.penUp()
+turtle.forward(steps: 5 * squareSize)
+turtle.penDown()
+drawArrow()
+
+// Draw sisxth arrow on second level
+turtle.penUp()
+turtle.forward(steps: 5 * squareSize)
+turtle.penDown()
+drawArrow()
+
+// Draw seventh arrow on second level
+turtle.penUp()
+turtle.forward(steps: 5 * squareSize)
+turtle.penDown()
+drawArrow()
+
+// Second level completer
 
 /*:
  ## Show the Live View
