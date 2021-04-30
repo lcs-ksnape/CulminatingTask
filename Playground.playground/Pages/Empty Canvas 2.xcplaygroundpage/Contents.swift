@@ -105,6 +105,17 @@ func drawRow() {
     }
 }
 
+func getIntoPositionToDrawRow() {// Get the turtle into position to draw a new row
+    turtle.left(by: 90)
+    turtle.penUp()
+    turtle.forward(steps: 4 * squareSize)
+    turtle.left(by: 90)
+    turtle.forward(steps: 6 * 5 * squareSize)
+    turtle.right(by: 180)
+    turtle.penDown()
+    
+}
+
 
 // MARK: Actual code for sketch
 turtle.currentPosition()
@@ -113,20 +124,15 @@ turtle.currentHeading()
 // Set the size of a square from our plan within this canvas
 let squareSize = 15
 
-// Draw a row
-drawRow()
+for _ in 1...11 {
+    // Draw a row
+    drawRow()
 
-// Get the turtle into position to draw a new row
-turtle.left(by: 90)
-turtle.penUp()
-turtle.forward(steps: 4 * squareSize)
-turtle.left(by: 90)
-turtle.forward(steps: 6 * 5 * squareSize)
-turtle.right(by: 180)
-turtle.penDown()
+    getIntoPositionToDrawRow()
 
-// Draw Row
-drawRow()
+}
+
+
 
 /*:
  ## Show the Live View
