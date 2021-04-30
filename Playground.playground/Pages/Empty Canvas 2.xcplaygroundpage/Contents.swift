@@ -43,7 +43,7 @@ func drawArrow() {
     
     
     // Drawing the bottom of the arrow
-    turtle.drawSelf()
+    //turtle.drawSelf()
     turtle.penUp()
     turtle.right(by: 90)
     //turtle.drawSelf()
@@ -89,108 +89,44 @@ func drawArrow() {
 
 
     // Check the turtle's position
-    turtle.drawSelf()
+    //turtle.drawSelf()
 }
 
+func drawRow() {
+    
+    for _ in 1...6 {
+        // Draw one arrow
+        drawArrow()
+
+        // Get into position to draw the next arrow
+        turtle.penUp()
+        turtle.forward(steps: 5 * squareSize)
+        turtle.penDown()
+    }
+}
 
 
 // MARK: Actual code for sketch
 turtle.currentPosition()
 turtle.currentHeading()
 
-// Move turtle to middle of canvas
-turtle.penUp()
-turtle.forward(steps: canvas.width/2)
-
-turtle.left(by: 90)
-turtle.forward(steps: canvas.height/2)
-turtle.right(by: 90)
-//turtle.drawSelf()
-
 // Set the size of a square from our plan within this canvas
 let squareSize = 15
 
-// Draw one arrow
-drawArrow()
+// Draw a row
+drawRow()
 
-// Get into position to draw the next arrow
-turtle.penUp()
-turtle.forward(steps: 5 * squareSize)
-turtle.penDown()
-
-// Draw a second arrow
-drawArrow()
-
-// Draw third arrow
-turtle.penUp()
-turtle.backward(steps: 15 * squareSize)
-turtle.penDown()
-drawArrow()
-
-// Draw fourth arrow
-turtle.penUp()
-turtle.forward(steps: 5 * squareSize)
-turtle.penDown()
-drawArrow()
-
-// Draw fifth arrow
-turtle.penUp()
-turtle.backward(steps: 10 * squareSize)
-turtle.penDown()
-drawArrow()
-
-// Draw sixth arrow
-turtle.penUp()
-turtle.forward(steps: 25 * squareSize)
-turtle.penDown()
-drawArrow()
-
-// Start on the next row
-turtle.penUp()
+// Get the turtle into position to draw a new row
 turtle.left(by: 90)
-turtle.forward(steps: 35)
+turtle.penUp()
+turtle.forward(steps: 4 * squareSize)
 turtle.left(by: 90)
-turtle.backward(steps: 90)
+turtle.forward(steps: 6 * 5 * squareSize)
+turtle.right(by: 180)
 turtle.penDown()
-drawArrow()
 
-// Draw second arrow on second level
-turtle.penUp()
-turtle.forward(steps: 5 * squareSize)
-turtle.penDown()
-drawArrow()
-
-// Draw third arrow on second level
-turtle.penUp()
-turtle.forward(steps: 5 * squareSize)
-turtle.penDown()
-drawArrow()
-
-// Draw fourth arrow on second level
-turtle.penUp()
-turtle.forward(steps: 5 * squareSize)
-turtle.penDown()
-drawArrow()
-
-// Draw fifth arrow on second level
-turtle.penUp()
-turtle.forward(steps: 5 * squareSize)
-turtle.penDown()
-drawArrow()
-
-// Draw sisxth arrow on second level
-turtle.penUp()
-turtle.forward(steps: 5 * squareSize)
-turtle.penDown()
-drawArrow()
-
-// Draw seventh arrow on second level
-turtle.penUp()
-turtle.forward(steps: 5 * squareSize)
-turtle.penDown()
-drawArrow()
-
-// Second level completer
+// Draw Row
+drawRow()
 
 /*:
  ## Show the Live View
