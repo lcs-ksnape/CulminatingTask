@@ -79,9 +79,9 @@ func position() {
     turtle.left(by: 180)
 }
 
-func column() {
+func column(shapeCount: Int) {
     // Draw a column of paralllograms
-    for _ in 1...7 {
+    for _ in 1...shapeCount {
 
         bottom()
 
@@ -91,45 +91,58 @@ func column() {
     }
 }
 
-turtle.setX(to: 50)
+func positionForNextColumn(shapeCount: Int) {
+    
+    // Get back to position to draw next column
 
-// Draw column 1
-column()
-
-// Get back to position to draw next column
-
-// Turn to begin going down the canvas
-turtle.drawSelf()
-turtle.penUp()
-turtle.right(by: 60)
-turtle.drawSelf()
-
-// Go down the canvas
-for _ in 1...7 {
-
-    turtle.forward(steps: triangleEdgeLength)
-    turtle.drawSelf()
+    // Turn to begin going down the canvas
+//    turtle.drawSelf()
+    turtle.penUp()
     turtle.right(by: 60)
-    turtle.forward(steps: triangleEdgeLength)
-    turtle.drawSelf()
+//    turtle.drawSelf()
+
+    // Go down the canvas
+    for _ in 1...shapeCount {
+
+        turtle.forward(steps: triangleEdgeLength)
+//        turtle.drawSelf()
+        turtle.right(by: 60)
+        turtle.forward(steps: triangleEdgeLength)
+//        turtle.drawSelf()
+        turtle.left(by: 60)
+//        turtle.drawSelf()
+    }
+
+    // Getting into position to draw next column
     turtle.left(by: 60)
-    turtle.drawSelf()
+    turtle.forward(steps: triangleEdgeLength)
+//    turtle.drawSelf()
+    turtle.left(by: 60)
+    turtle.forward(steps: triangleEdgeLength)
+//    turtle.drawSelf()
+    turtle.right(by: 60)
+//    turtle.drawSelf()
+    turtle.penDown()
 }
 
-// Getting into position to draw next column
-turtle.left(by: 60)
-turtle.forward(steps: triangleEdgeLength)
-turtle.drawSelf()
-turtle.left(by: 60)
-turtle.forward(steps: triangleEdgeLength)
-turtle.drawSelf()
-turtle.right(by: 60)
-turtle.drawSelf()
-turtle.penDown()
+turtle.setX(to: 50)
 
-// Draw column 2
-column()
+for _ in 1...4 {
 
+    // Draw column 1
+    column(shapeCount: 8)
+
+    // Get into position for column 2
+    positionForNextColumn(shapeCount: 8)
+
+    // Draw column 2
+    column(shapeCount: 8)
+
+    // Get into position for column 3
+    positionForNextColumn(shapeCount: 9)
+
+    turtle.drawSelf()
+}
 
 /*:
  ## Show the Live View
