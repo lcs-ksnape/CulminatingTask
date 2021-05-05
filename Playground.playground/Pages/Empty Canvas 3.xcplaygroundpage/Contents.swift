@@ -40,18 +40,18 @@ PlaygroundPage.current.liveView = canvas
 
 
 // Set the size of a square from our plan within this canvas
-let squareSize = 30
+let triangleEdgeLength = 30
 
 func bottom() {
     // Start drawing the Bottom Parallelogram
     turtle.penDown()
-    turtle.forward(steps: squareSize)
+    turtle.forward(steps: triangleEdgeLength)
     turtle.left(by: 60)
-    turtle.forward(steps: squareSize)
+    turtle.forward(steps: triangleEdgeLength)
     turtle.left(by: 120)
-    turtle.forward(steps: squareSize)
+    turtle.forward(steps: triangleEdgeLength)
     turtle.left(by: 60)
-    turtle.forward(steps: squareSize)
+    turtle.forward(steps: triangleEdgeLength)
 
 }
 
@@ -59,34 +59,77 @@ func top() {
     // Draw Top Parallelogram
     turtle.right(by: 180)
     turtle.penUp()
-    turtle.forward(steps: squareSize)
+    turtle.forward(steps: triangleEdgeLength)
     turtle.penDown()
     turtle.left(by: 60)
-    turtle.forward(steps: squareSize)
+    turtle.forward(steps: triangleEdgeLength)
     turtle.right(by: 120)
-    turtle.forward(steps: squareSize)
+    turtle.forward(steps: triangleEdgeLength)
     turtle.right(by: 60)
-    turtle.forward(steps: squareSize)
+    turtle.forward(steps: triangleEdgeLength)
 }
 
 func position() {
     // Get into position to draw New Parallelogram
     turtle.penUp()
     turtle.left(by: 180)
-    turtle.forward(steps: squareSize)
+    turtle.forward(steps: triangleEdgeLength)
     turtle.left(by: 60)
-    turtle.forward(steps: squareSize)
+    turtle.forward(steps: triangleEdgeLength)
     turtle.left(by: 180)
 }
 
-for _ in 1...8 {
+func column() {
+    // Draw a column of paralllograms
+    for _ in 1...7 {
 
-    bottom()
+        bottom()
 
-    top()
+        top()
 
-    position()
+        position()
+    }
 }
+
+turtle.setX(to: 50)
+
+// Draw column 1
+column()
+
+// Get back to position to draw next column
+
+// Turn to begin going down the canvas
+turtle.drawSelf()
+turtle.penUp()
+turtle.right(by: 60)
+turtle.drawSelf()
+
+// Go down the canvas
+for _ in 1...7 {
+
+    turtle.forward(steps: triangleEdgeLength)
+    turtle.drawSelf()
+    turtle.right(by: 60)
+    turtle.forward(steps: triangleEdgeLength)
+    turtle.drawSelf()
+    turtle.left(by: 60)
+    turtle.drawSelf()
+}
+
+// Getting into position to draw next column
+turtle.left(by: 60)
+turtle.forward(steps: triangleEdgeLength)
+turtle.drawSelf()
+turtle.left(by: 60)
+turtle.forward(steps: triangleEdgeLength)
+turtle.drawSelf()
+turtle.right(by: 60)
+turtle.drawSelf()
+turtle.penDown()
+
+// Draw column 2
+column()
+
 
 /*:
  ## Show the Live View
