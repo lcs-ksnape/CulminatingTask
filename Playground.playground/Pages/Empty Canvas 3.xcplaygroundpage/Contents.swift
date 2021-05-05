@@ -4,8 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 600
-let preferredHeight = 600
+let preferredWidth = 400
+let preferredHeight = 400
 /*:
  ## Required code
  
@@ -37,7 +37,56 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+
+
+// Set the size of a square from our plan within this canvas
+let squareSize = 30
+
+func bottom() {
+    // Start drawing the Bottom Parallelogram
+    turtle.penDown()
+    turtle.forward(steps: squareSize)
+    turtle.left(by: 60)
+    turtle.forward(steps: squareSize)
+    turtle.left(by: 120)
+    turtle.forward(steps: squareSize)
+    turtle.left(by: 60)
+    turtle.forward(steps: squareSize)
+
+}
+
+func top() {
+    // Draw Top Parallelogram
+    turtle.right(by: 180)
+    turtle.penUp()
+    turtle.forward(steps: squareSize)
+    turtle.penDown()
+    turtle.left(by: 60)
+    turtle.forward(steps: squareSize)
+    turtle.right(by: 120)
+    turtle.forward(steps: squareSize)
+    turtle.right(by: 60)
+    turtle.forward(steps: squareSize)
+}
+
+func position() {
+    // Get into position to draw New Parallelogram
+    turtle.penUp()
+    turtle.left(by: 180)
+    turtle.forward(steps: squareSize)
+    turtle.left(by: 60)
+    turtle.forward(steps: squareSize)
+    turtle.left(by: 180)
+}
+
+for _ in 1...8 {
+
+    bottom()
+
+    top()
+
+    position()
+}
 
 /*:
  ## Show the Live View
