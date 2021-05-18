@@ -39,49 +39,40 @@ PlaygroundPage.current.liveView = canvas
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 
-func puzzle() {//draw puzzle piece
-    turtle.forward(steps: 20)
-    turtle.right(by: 90)
-    turtle.forward(steps: 20)
-    turtle.left(by: 90)
-    turtle.forward(steps: 20)
-    turtle.left(by: 90)
-    turtle.forward(steps: 20)
-    turtle.right(by: 90)
+func drawsquare(){
+    // drawing a single square
+    turtle.penDown()
     turtle.forward(steps: 20)
     turtle.left(by: 90)
     turtle.forward(steps: 20)
     turtle.left(by: 90)
     turtle.forward(steps: 20)
-    turtle.right(by: 90)
-    turtle.forward(steps: 20)
-    turtle.right(by: 90)
-    turtle.forward(steps: 20)
     turtle.left(by: 90)
     turtle.forward(steps: 20)
-    turtle.left(by: 90)
-    turtle.forward(steps: 20)
-    turtle.right(by: 90)
-    turtle.forward(steps: 20)
-    turtle.left(by: 90)
-    turtle.forward(steps: 20)
-    turtle.left(by: 90)
-    turtle.forward(steps: 20)
-    turtle.right(by: 90)
-    turtle.forward(steps: 20)
-    turtle.left(by: 90)
-    turtle.forward(steps: 20)
-    turtle.left(by: 90)
-    turtle.forward(steps: 20)
-    turtle.right(by: 90)
-    turtle.forward(steps: 20)
-    turtle.right(by: 90)
-    turtle.forward(steps: 20)
-    turtle.left(by: 90)
-    turtle.forward(steps: 20)}
+}
 
+func top(){
+    // drawing  a square on top
+    turtle.penUp()
+    turtle.right(by: 180)
+    turtle.forward(steps: 20)
+    turtle.right(by: 90)
+}
+
+func right(){
+    // getting into postion to draw a square to the right
+    turtle.penUp()
+    turtle.forward(steps: 20)
+}
+
+func left() {
+    // getting into postion to draw a square to the left
+    turtle.right(by: 90)
+    turtle.right(by: 90)
+}
 
 // coordinates
+
 turtle.penUp()
 turtle.forward(steps: 100)
 turtle.left(by: 90)
@@ -90,7 +81,14 @@ turtle.right(by: 90)
 
 
 turtle.penDown()
-puzzle()
+
+drawsquare()
+top()
+drawsquare()
+left()
+drawsquare()
+right()
+drawsquare()
 
 
 
