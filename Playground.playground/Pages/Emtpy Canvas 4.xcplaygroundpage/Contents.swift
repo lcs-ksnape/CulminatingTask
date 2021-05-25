@@ -49,9 +49,12 @@ func drawsquare(){
     turtle.forward(steps: 20)
     turtle.left(by: 90)
     turtle.forward(steps: 20)
+    turtle.left(by: 90)
 }
 
 func fill() {
+    turtle.penUp()
+    turtle.forward(steps: 20)
     for _ in 1...9 {
     turtle.left(by: 90)
     turtle.penUp()
@@ -82,7 +85,21 @@ func fill() {
     turtle.forward(steps: 18)
     turtle.penUp()
     turtle.forward(steps: 1)
+    
+    turtle.penUp()
+    turtle.right(by: 180)
+    turtle.forward(steps: 19)
+    turtle.right(by: 90)
+    turtle.forward(steps: 19)
+    turtle.left(by: 90)
 
+    turtle.penUp()
+    turtle.backward(steps: 20)
+}
+
+func drawfillsquare() {
+    drawsquare()
+    fill()
 }
 
 func top(){
@@ -116,16 +133,22 @@ turtle.right(by: 90)
 
 turtle.penDown()
 
-drawsquare()
 
-fill()
+top()
+drawfillsquare()
+turtle.drawSelf()
 
-//top()
-//drawsquare()
 //left()
 //drawsquare()
+
+
+
 //right()
 //drawsquare()
+//fill()
+
+
+
 
 
 
