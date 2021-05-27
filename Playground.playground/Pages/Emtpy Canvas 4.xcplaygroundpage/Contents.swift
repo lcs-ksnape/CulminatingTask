@@ -105,49 +105,168 @@ func drawfillsquare() {
 func top(){
     // drawing  a square on top
     turtle.penUp()
-    turtle.right(by: 180)
-    turtle.forward(steps: 20)
-    turtle.right(by: 90)
+    turtle.forward(steps: 22)
+}
+
+func bottom(){
+    turtle.penUp()
+    turtle.backward(steps: 21)
 }
 
 func right(){
     // getting into postion to draw a square to the right
     turtle.penUp()
-    turtle.forward(steps: 20)
+    turtle.right(by: 90)
+    turtle.forward(steps: 21)
+    turtle.left(by: 90)
+    turtle.forward(steps: 1)
 }
 
 func left() {
     // getting into postion to draw a square to the left
-    turtle.right(by: 90)
+    turtle.penUp()
+    turtle.left(by: 90)
+    turtle.forward(steps: 21)
     turtle.right(by: 90)
 }
 
-// coordinates
+func puzzlepiece() {
+    // drawing the first bottom square of the puzle piece
+    //turtle.drawSelf()
+    bottom()
+    drawfillsquare()
 
+
+    // drawing the second row of the puzzle piece
+    top()
+    drawfillsquare()
+    left()
+    turtle.forward(steps: 1)
+    drawfillsquare()
+    right()
+    right()
+    turtle.backward(steps: 1)
+    drawfillsquare()
+    //turtle.drawSelf()
+
+    // drawing the third row of the puzzle piece
+    left()
+    top()
+    //turtle.drawSelf()
+    drawfillsquare()
+
+    // drawing the fourth row of the puzzle peice
+    top()
+    drawfillsquare()
+    left()
+    turtle.forward(steps: 1)
+    drawfillsquare()
+    right()
+    right()
+    turtle.backward(steps: 1)
+    drawfillsquare()
+    //turtle.drawSelf()
+
+    // drawing the final row to complete the puzzle piece
+    left()
+    top()
+    //turtle.drawSelf()
+    drawfillsquare()
+
+
+}
+
+
+
+
+
+
+
+
+
+// coordinates
 turtle.penUp()
 turtle.forward(steps: 100)
 turtle.left(by: 90)
 turtle.forward(steps: 100)
 turtle.right(by: 90)
 
+// putting the turtle in position to start drawing
+turtle.left(by: 90)
+
 
 turtle.penDown()
 
+// drawing the first bottom square of the puzle piece
+//turtle.drawSelf()
+bottom()
+drawfillsquare()
 
+
+// drawing the second row of the puzzle piece
 top()
 drawfillsquare()
-turtle.drawSelf()
+left()
+turtle.forward(steps: 1)
+drawfillsquare()
+right()
+right()
+turtle.backward(steps: 1)
+drawfillsquare()
+//turtle.drawSelf()
 
+// drawing the third row of the puzzle piece
+left()
+top()
+//turtle.drawSelf()
+drawfillsquare()
+
+// drawing the fourth row of the puzzle peice
+top()
+drawfillsquare()
+left()
+turtle.forward(steps: 1)
+drawfillsquare()
+right()
+right()
+turtle.backward(steps: 1)
+drawfillsquare()
+//turtle.drawSelf()
+
+// drawing the final row to complete the puzzle piece
+left()
+top()
+//turtle.drawSelf()
+drawfillsquare()
+
+turtle.right(by: 90)
+turtle.forward(steps: 50)
+turtle.left(by: 90)
+puzzlepiece()
+
+
+
+
+
+
+//top()
+//drawfillsquare()
+//turtle.drawSelf()
+//
 //left()
-//drawsquare()
-
-
-
+//drawfillsquare()
+//turtle.drawSelf()
+//
+//
 //right()
-//drawsquare()
-//fill()
-
-
+//right()
+//drawfillsquare()
+//turtle.drawSelf()
+//
+//left()
+//bottom()
+//drawfillsquare()
+//turtle.drawSelf()
 
 
 
