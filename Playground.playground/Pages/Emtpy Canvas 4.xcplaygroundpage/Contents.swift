@@ -197,77 +197,15 @@ turtle.left(by: 90)
 
 turtle.penDown()
 
-// drawing the first bottom square of the puzle piece
-//turtle.drawSelf()
-bottom()
-drawfillsquare()
 
-
-// drawing the second row of the puzzle piece
-top()
-drawfillsquare()
-left()
-turtle.forward(steps: 1)
-drawfillsquare()
-right()
-right()
-turtle.backward(steps: 1)
-drawfillsquare()
-//turtle.drawSelf()
-
-// drawing the third row of the puzzle piece
-left()
-top()
-//turtle.drawSelf()
-drawfillsquare()
-
-// drawing the fourth row of the puzzle peice
-top()
-drawfillsquare()
-left()
-turtle.forward(steps: 1)
-drawfillsquare()
-right()
-right()
-turtle.backward(steps: 1)
-drawfillsquare()
-//turtle.drawSelf()
-
-// drawing the final row to complete the puzzle piece
-left()
-top()
-//turtle.drawSelf()
-drawfillsquare()
-
-turtle.right(by: 90)
-turtle.forward(steps: 50)
-turtle.left(by: 90)
 puzzlepiece()
 
-
-
-
-
-
-//top()
-//drawfillsquare()
-//turtle.drawSelf()
-//
-//left()
-//drawfillsquare()
-//turtle.drawSelf()
-//
-//
-//right()
-//right()
-//drawfillsquare()
-//turtle.drawSelf()
-//
-//left()
-//bottom()
-//drawfillsquare()
-//turtle.drawSelf()
-
+// trying to put multiple puzzle pieces in a row
+turtle.penUp()
+turtle.backward(steps: 62)
+turtle.right(by: 90)
+turtle.forward(steps: 123)
+turtle.left(by: 90)
 
 
 
