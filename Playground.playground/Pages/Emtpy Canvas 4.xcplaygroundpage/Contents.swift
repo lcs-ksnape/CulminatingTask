@@ -141,11 +141,11 @@ func puzzlepiece() {
     top()
     drawfillsquare()
     left()
-    turtle.forward(steps: 1)
+//    turtle.forward(steps: 1)
     drawfillsquare()
     right()
     right()
-    turtle.backward(steps: 1)
+//    turtle.backward(steps: 1)
     drawfillsquare()
     //turtle.drawSelf()
 
@@ -159,11 +159,11 @@ func puzzlepiece() {
     top()
     drawfillsquare()
     left()
-    turtle.forward(steps: 1)
+//    turtle.forward(steps: 1)
     drawfillsquare()
     right()
     right()
-    turtle.backward(steps: 1)
+//    turtle.backward(steps: 1)
     drawfillsquare()
     //turtle.drawSelf()
 
@@ -173,6 +173,8 @@ func puzzlepiece() {
     //turtle.drawSelf()
     drawfillsquare()
 
+    turtle.penUp()
+    turtle.backward(steps: 60)
 
 }
 
@@ -197,9 +199,9 @@ turtle.left(by: 90)
 
 turtle.penDown()
 
-
+turtle.drawSelf()
 puzzlepiece()
-
+turtle.drawSelf()
 // trying to put multiple puzzle pieces in a row
 turtle.penUp()
 turtle.backward(steps: 62)
