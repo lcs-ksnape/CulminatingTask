@@ -39,6 +39,7 @@ PlaygroundPage.current.liveView = canvas
 
 // Replace this comment with your first comment – what is the goal of the code you're about to write?
 
+
 func drawsquare(){
     // drawing a single square
     turtle.penDown()
@@ -178,8 +179,20 @@ func puzzlepiece() {
 
 }
 
+func row() {
+    // trying to put multiple puzzle pieces in a row
+    // try moving it by square sizes instead of steps
+    turtle.penUp()
+    turtle.right(by: 90)
+    turtle.forward(steps: 6 * squareSize)
+    turtle.left(by: 90)
+    puzzlepiece()
+    //turtle.drawSelf()
+}
 
 
+
+let squareSize = 20
 
 
 
@@ -195,19 +208,25 @@ turtle.right(by: 90)
 
 // putting the turtle in position to start drawing
 turtle.left(by: 90)
-
-
 turtle.penDown()
 
-turtle.drawSelf()
-puzzlepiece()
-turtle.drawSelf()
-// trying to put multiple puzzle pieces in a row
-turtle.penUp()
-turtle.backward(steps: 62)
-turtle.right(by: 90)
-turtle.forward(steps: 123)
-turtle.left(by: 90)
+
+
+// drawing a row of puzzle pieces using a loop
+
+
+
+
+
+
+
+
+
+//turtle.penUp()
+//turtle.backward(steps: 62)
+//turtle.right(by: 90)
+//turtle.forward(steps: 123)
+//turtle.left(by: 90)
 
 
 
