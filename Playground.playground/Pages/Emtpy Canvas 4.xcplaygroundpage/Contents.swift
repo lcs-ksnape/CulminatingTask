@@ -4,8 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 400
-let preferredHeight = 400
+let preferredWidth = 600
+let preferredHeight = 600
 /*:
  ## Required code
  
@@ -193,10 +193,12 @@ func row() {
 func column () {
     // trying to get into position to draw another the next row
     turtle.left(by: 90)
-    turtle.forward(steps: 21 * squareSize)
+    // added 18
+    // added another 18
+    turtle.forward(steps: 57 * squareSize)
     turtle.right(by: 90)
-    turtle.forward(steps: 3 * squareSize)
-    turtle.backward(steps: 10)
+    turtle.forward(steps: 1 * squareSize)
+    turtle.forward(steps: 5)
 //    turtle.drawSelf()
 }
 
@@ -216,35 +218,33 @@ turtle.forward(steps: 10)
 turtle.left(by: 90)
 turtle.forward(steps: 20)
 turtle.right(by: 90)
-turtle.left(by: 90)
-turtle.penDown()
+turtle.left(by: 180)
+turtle.forward(steps: 30)
+turtle.right(by: 90)
+turtle.backward(steps: 3 * squareSize)
+
+//puzzlepiece()
+
+
 
 
 
 // drawing a row of puzzle pieces using a loop
 
-for _ in 1...4 {
+for _ in 1...13 {
 
-for _ in 1...4 {
+for _ in 1...9 {
     // drawing a puzzle piece, then getting into positon to draw another
     puzzlepiece()
-    turtle.drawSelf()
-    
+//    turtle.drawSelf()
     row()
-    
+
 }
  column()
 
 }
 
 canvas.highPerformance=false
-
-
-//turtle.penUp()
-//turtle.backward(steps: 62)
-//turtle.right(by: 90)
-//turtle.forward(steps: 123)
-//turtle.left(by: 90)
 
 
 
