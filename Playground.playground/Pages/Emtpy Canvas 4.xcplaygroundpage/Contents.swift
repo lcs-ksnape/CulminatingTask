@@ -193,11 +193,15 @@ func row() {
 func column () {
     // trying to get into position to draw another the next row
     turtle.left(by: 90)
-    turtle.forward(steps: 22 * squareSize)
+    turtle.forward(steps: 21 * squareSize)
     turtle.right(by: 90)
     turtle.forward(steps: 3 * squareSize)
+    turtle.backward(steps: 10)
 //    turtle.drawSelf()
 }
+
+canvas.highPerformance=true
+
 
 let squareSize = 20
 
@@ -224,6 +228,7 @@ for _ in 1...4 {
 for _ in 1...4 {
     // drawing a puzzle piece, then getting into positon to draw another
     puzzlepiece()
+    turtle.drawSelf()
     
     row()
     
@@ -232,7 +237,7 @@ for _ in 1...4 {
 
 }
 
-
+canvas.highPerformance=false
 
 
 //turtle.penUp()
