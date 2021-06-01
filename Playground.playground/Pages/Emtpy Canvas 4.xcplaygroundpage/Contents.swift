@@ -190,7 +190,14 @@ func row() {
     //turtle.drawSelf()
 }
 
-
+func column () {
+    // trying to get into position to draw another the next row
+    turtle.left(by: 90)
+    turtle.forward(steps: 24 * squareSize)
+    turtle.right(by: 90)
+    turtle.forward(steps: 4 * squareSize)
+    turtle.drawSelf()
+}
 
 let squareSize = 20
 
@@ -201,12 +208,10 @@ let squareSize = 20
 
 // coordinates
 turtle.penUp()
-turtle.forward(steps: 100)
+turtle.forward(steps: 10)
 turtle.left(by: 90)
-turtle.forward(steps: 100)
+turtle.forward(steps: 20)
 turtle.right(by: 90)
-
-// putting the turtle in position to start drawing
 turtle.left(by: 90)
 turtle.penDown()
 
@@ -214,10 +219,18 @@ turtle.penDown()
 
 // drawing a row of puzzle pieces using a loop
 
+for _ in 1...4 {
 
+for _ in 1...4 {
+    // drawing a puzzle piece, then getting into positon to draw another
+    puzzlepiece()
+    
+    row()
+    
+}
+ column()
 
-
-
+}
 
 
 
