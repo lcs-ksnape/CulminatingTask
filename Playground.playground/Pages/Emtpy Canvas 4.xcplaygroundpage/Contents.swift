@@ -193,10 +193,10 @@ func row() {
 func column () {
     // trying to get into position to draw another the next row
     turtle.left(by: 90)
-    turtle.forward(steps: 24 * squareSize)
+    turtle.forward(steps: 22 * squareSize)
     turtle.right(by: 90)
-    turtle.forward(steps: 4 * squareSize)
-    turtle.drawSelf()
+    turtle.forward(steps: 3 * squareSize)
+//    turtle.drawSelf()
 }
 
 let squareSize = 20
